@@ -1,21 +1,28 @@
 #![allow(non_snake_case)]
 
-use dioxus::prelude::*;
-
-mod components;
-mod layouts;
 mod pages;
+mod components;
 
-use crate::pages::index::Index;
+use leptos::*;
+use leptos_router::*;
+use leptos_meta::*;
+use crate::components::layout::Layout;
+use crate::pages::auth::Login;
+use crate::pages::Index;
 
-#[derive(Clone, Routable, Debug, PartialEq)]
-pub(crate) enum Route {
-    #[route("/")]
-    Index {},
-}
+#[component]
+pub fn App() -> impl IntoView {
+    let authenticated = || true;
 
-pub fn App() -> Element {
-    rsx! {
-        Router::<Route> {}
+    view! {
+        <Router>
+            <Routes>
+                <ProtectedRoute path="/settings" view=Layout condition=authenticated redirect_path="/auth/login">
+                    <Route path="" view=|| view! {"settings index"} />
+                </ProtectedRoute>
+                <Route path="/" view=Index />
+                <Route path="/auth/login" view=Login />
+            </Routes>
+        </Router>
     }
 }

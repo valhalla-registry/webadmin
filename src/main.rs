@@ -1,8 +1,10 @@
-use dioxus_logger::tracing::{info, Level};
+use leptos::*;
+use webadmin::App;
 
 fn main() {
-    // Init logger
-    dioxus_logger::init(Level::INFO).expect("failed to init logger");
-    info!("starting app");
-    dioxus::launch(webadmin::App);
+    // set up logging
+    let _ = console_log::init_with_level(log::Level::Debug);
+    console_error_panic_hook::set_once();
+
+    mount_to_body(App)
 }
