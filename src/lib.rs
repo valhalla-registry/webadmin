@@ -3,26 +3,32 @@
 mod pages;
 mod components;
 
-use leptos::*;
-use leptos_router::*;
-use leptos_meta::*;
+use dioxus::prelude::*;
+
 use crate::components::layout::Layout;
+// use crate::pages::auth::Login;
+use crate::pages::Home;
 use crate::pages::auth::Login;
-use crate::pages::Index;
+use crate::pages::not_found::NotFound;
 
-#[component]
-pub fn App() -> impl IntoView {
-    let authenticated = || true;
+#[derive(Clone, Routable, Debug, PartialEq)]
+#[rustfmt::skip]
+pub enum Route {
+    #[layout(Layout)]
+    #[route("/")]
+    Home,
+    #[end_layout]
 
-    view! {
-        <Router>
-            <Routes>
-                <ProtectedRoute path="/settings" view=Layout condition=authenticated redirect_path="/auth/login">
-                    <Route path="" view=|| view! {"settings index"} />
-                </ProtectedRoute>
-                <Route path="/" view=Index />
-                <Route path="/auth/login" view=Login />
-            </Routes>
-        </Router>
+    #[route("/auth/login")]
+    Login,
+
+    #[route("/:..route")]
+    NotFound { route: Vec<String> },
+}
+
+pub fn app() -> Element {
+    rsx! {
+        style { {include_str!("../assets/tailwind.css")} }
+        Router::<Route> {}
     }
 }

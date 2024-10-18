@@ -4,7 +4,7 @@ The frontend for the Valhalla Registry
 
 ## Sidebar
 
-```
+```text
 Dashboard
     Overview
     Security
@@ -34,10 +34,11 @@ Maintenance
     Restart backend
     Rebuild search index
 ```
+
 ## Development
 
-1. Install npm: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
-2. Install the tailwind css cli: https://tailwindcss.com/docs/installation
+1. Install npm: <https://docs.npmjs.com/downloading-and-installing-node-js-and-npm>
+2. Install the tailwind css cli: <https://tailwindcss.com/docs/installation>
 3. Run the following command in the root of the project to start the tailwind CSS compiler:
 
 ```bash
@@ -50,4 +51,4 @@ Run the following command in the root of the project to start the Dioxus dev ser
 dx serve --hot-reload
 ```
 
-- Open the browser to http://localhost:8080
+- Open the browser to <http://localhost:8080>

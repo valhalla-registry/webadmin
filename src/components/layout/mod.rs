@@ -1,18 +1,23 @@
 mod header;
 mod sidebar;
 
-use leptos::*;
-use leptos_meta::Body;
-use leptos_router::Outlet;
+use dioxus::prelude::*;
+
 use crate::components::layout::header::Header;
 use crate::components::layout::sidebar::Sidebar;
+use crate::Route;
 
 #[component]
-pub fn Layout() -> impl IntoView {
-    view! {
-        <Body class="bg-slate-900" />
-        <Header />
-        <Sidebar />
-        <Outlet />
+pub fn Layout() -> Element {
+    rsx! {
+        body {
+            class: "bg-gray-100 h-screen",
+            Header {},
+            Sidebar {},
+            div {
+                class: "w-full pt-10 px-4 ps-72",
+                Outlet::<Route> {}
+            }
+        }
     }
 }

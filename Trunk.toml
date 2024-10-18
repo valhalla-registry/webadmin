@@ -1,4 +1,0 @@
-[[hooks]]
-stage = "build"
-command = "sh"
-command_arguments = ["-c", "npx tailwindcss -i ./input.css -o ./public/styles.css"]
