@@ -1,8 +1,8 @@
 use dioxus::prelude::*;
 
 #[component]
-pub fn Settings() -> Element {
+pub fn Overview() -> Element {
     rsx! {
-        p { "settings" }
+        p { "overview" }
     }
 }

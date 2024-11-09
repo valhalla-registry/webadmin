@@ -11,7 +11,7 @@ use crate::Route;
 pub fn Layout() -> Element {
     rsx! {
         body {
-            class: "bg-gray-100 h-screen",
+            class: "bg-gray-100 h-screen min-h-fit",
             Header {},
             Sidebar {},
             div {

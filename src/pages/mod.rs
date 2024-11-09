@@ -1,6 +1,7 @@
 pub mod not_found;
 pub mod settings;
 pub mod auth;
+pub mod dashboard;
 
 use dioxus::prelude::*;
 
@@ -14,7 +15,70 @@ pub fn Home() -> Element {
                 class: "bg-white border shadow-sm rounded-xl",
                 div {
                     class: "p-4",
-                    "card content"
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
+                    p { "card content" }
                 }
             }
         }
